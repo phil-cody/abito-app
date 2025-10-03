@@ -1,6 +1,4 @@
-*,
-*::after,
-*::before {
+* {
   box-sizing: border-box;
 }
 
@@ -10,30 +8,29 @@ body {
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 12px;
-  max-width: 1170px;
   width: 100%;
+  max-width: 1170px;
+  padding: 0 12px;
+  margin: 0 auto;
 }
 
 .btn {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
+  line-height: 16px;
   font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
   cursor: pointer;
 }
 
 .btn-outline {
-  color: rgba(10, 20, 58, 1);
   background-color: transparent;
 }
 
 .btn-primary {
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(37, 110, 235, 1);
+  background-color: rgb(37, 110, 235);
+  color: white;
 }
 
 .search {
@@ -41,23 +38,22 @@ body {
 }
 
 .search-box {
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(37, 110, 235);
+  padding: 3px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 3px;
-  width: 100%;
-  border-radius: 5px;
-  background-color: rgba(37, 110, 235, 1);
 }
 
 .search-box input {
   flex-grow: 1;
   padding: 14px 22px;
-  min-width: 0;
   border-radius: 5px;
-  border: none;
-  background: rgba(255, 255, 255, 1);
   outline: none;
+  border: none;
+  min-width: 0;
 }
 
 .search-btn {
@@ -70,18 +66,9 @@ body {
   height: 15px;
 }
 
-.search-btn .search-btn__icon::placeholder {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  color: rgba(10, 20, 58, 1);
-  opacity: 0.4;
-}
-
 .search-btn .search-btn__text {
   margin-left: 2px;
   font-size: 16px;
-  font-weight: 400;
   line-height: 19px;
 }
 
@@ -92,6 +79,7 @@ body {
 .content-box {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 30px;
 }
 
@@ -100,16 +88,15 @@ body {
 }
 
 .content-side {
-  min-width: 260px;
   width: 260px;
+  min-width: 260px;
 }
 
 .content-main__title {
-  margin-top: 0;
-  margin-bottom: 25px;
   font-size: 24px;
   line-height: 28px;
-  color: rgba(10, 20, 58, 1);
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .content-main__list {
@@ -120,28 +107,21 @@ body {
 }
 
 .content-side__title {
-  margin-top: 0;
-  margin-bottom: 23px;
   font-size: 18px;
   line-height: 21px;
-  color: rgba(10, 20, 58, 1);
-}
-
-.content-side__box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  margin-top: 0;
+  margin-bottom: 23px;
 }
 
 .content-side__list {
   display: flex;
   flex-direction: column;
-  row-gap: 25px;
-  margin-bottom: 36px;
-  padding-bottom: 36px;
+  justify-content: space-between;
   height: 100%;
-  border-bottom: 1px solid rgba(229, 229, 229, 1);
+  gap: 25px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  padding-bottom: 36px;
+  margin-bottom: 36px;
 }
 
 .content-side__list-item {
@@ -150,25 +130,17 @@ body {
   align-items: flex-start;
 }
 
-.content-side__list-item--img {
-  width: 30px;
-  height: 30px;
-}
-
 .content-side__list-item--title {
   margin-top: 7px;
   margin-bottom: 5px;
   font-size: 14px;
   line-height: 16px;
-  color: rgba(10, 20, 58, 1);
 }
 
 .content-side__list-item--text {
-  margin: 0;
   font-size: 14px;
-  font-weight: 400;
   line-height: 16px;
-  color: rgba(10, 20, 58, 1);
+  margin: 0;
 }
 
 .content-side__footer {
@@ -177,12 +149,11 @@ body {
   gap: 4px;
 }
 
-.content-side__footer-item {
+.content-side__footer--item {
+  color: rgb(196, 196, 196);
   margin: 0;
   font-size: 14px;
-  font-weight: 400;
   line-height: 16px;
-  color: rgba(196, 196, 196, 1);
 }
 
 .content-product {
@@ -201,22 +172,19 @@ body {
 
 .content-product__title,
 .content-product__price {
-  margin-top: 0;
-  margin-bottom: 25px;
   font-size: 24px;
   line-height: 28px;
-  color: rgba(10, 20, 58, 1);
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
-.content-product__img {
+content-product__img {
   width: 100%;
 }
 
 .content-product__text {
   font-size: 14px;
-  font-weight: 400;
   line-height: 20px;
-  color: rgba(10, 20, 58, 1);
 }
 
 @media (max-width: 1200px) {
@@ -240,7 +208,7 @@ body {
 
   .content-side {
     width: 100%;
-    min-width: none;
+    min-width: 0;
   }
 
   .content-product {
@@ -257,6 +225,7 @@ body {
     flex-basis: 100%;
     width: 100%;
   }
+
 }
 
 @media (max-width: 786px) {
